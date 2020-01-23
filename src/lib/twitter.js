@@ -9,9 +9,9 @@ const T = new Twit({
 })
 
 
-const tstream = T.stream('statuses/filter', { follow: '69713509' });
+const tstream = T.stream('statuses/filter', { follow: '69713509 -RT' });
 tstream.on('tweet', (tweet) => {
-  let msg = "**Tweet:** " + tweet.text + " @Twitter";
+  let msg = "**Tweet:** " + tweet.text;
 
   let channel = client.channels.get('480137199350710305'); // Master Ravenwood, general chat
   if (channel) channel.send(msg);
